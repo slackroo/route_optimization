@@ -174,7 +174,7 @@ tat_df.index.name=None
 DC=DC.merge(demand_df,how='outer')
 
 st.write(clusters)
-study = DC[DC['org_cluster'].isin([np.nan]+clusters)]['center_name']
+study = DC[DC['k_mean_cluster'].isin([np.nan]+clusters)]['center_name']
 st.markdown('Based on cluster selection demand file is  ')
 
 st.write(DC[DC['center_name'].isin(study)])
