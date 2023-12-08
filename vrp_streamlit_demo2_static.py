@@ -56,7 +56,8 @@ DC.reset_index(drop=True,inplace=True)
 st.write(DC)
 
 
-m_2 = folium.Map(location=[28.66, 77.15], tiles=" OpenStreetMap", zoom_start=10)
+m_2 = folium.Map(location=[28.66, 77.15], zoom_start=10)
+folium.TileLayer('OpenStreetMap', attr='Map data © OpenStreetMap contributors').add_to(m_2)
 
 
 colors = ['red', 'blue', 'green', 'purple', 'orange', 'darkred', \
